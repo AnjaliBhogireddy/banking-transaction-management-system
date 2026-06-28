@@ -4,6 +4,7 @@ import com.anjali.banking_transaction_management_system.entity.Customer;
 import com.anjali.banking_transaction_management_system.service.CustomerService;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.util.List;
 
 @RestController
@@ -17,7 +18,7 @@ public class CustomerController {
     }
 
     @PostMapping
-    public Customer createCustomer(@RequestBody Customer customer) {
+    public Customer createCustomer(@jakarta.validation.Valid @RequestBody Customer customer) {
         return customerService.createCustomer(customer);
     }
 
